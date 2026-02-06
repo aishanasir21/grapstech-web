@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@font-face {
+    font-family: font1;
+    src: url(/public/fonts/Akkurat-Mono.e884b32.woff2);
+}
+@font-face {
+    font-family: font2;
+    src: url(/public/fonts/NeueHaasGroteskDisplay-Medium.fd99855.woff2);
+}
+@font-face {
+    font-family: font3;
+    src: url(/public/fonts/NeueHaasGroteskDisplay-Reg.530b233.woff2);
+}
+@font-face {
+    font-family: font4;
+    src: url(/public/fonts/UcCo3FwrK3iLTcviYwYZ8UA3.woff2);
+}
+@font-face {
+    font-family: font5;
+    src: url(/public//fonts/lausanne-300.CMiifVRe.woff2);
+}
+body{
+    color: #9999993e;
+}
+@keyframes infiniteScroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.animate-infiniteScroll{
+    animation: infiniteScroll 25s linear infinite;
+}
