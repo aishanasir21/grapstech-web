@@ -6,13 +6,15 @@ import Gallery from './Gallery'
 
 const Section7 = () => {
   return (
-    <div className='h-auto w-auto relative mx-[1vw] '>
-      <HeroLine/>
-      <div className='flex flex-row justify-between my-[4vw] items-center'>
+    <div className='w-full relative pt-24 px-3 md:px-6 mb-14'>
+      <HeroLine />
+
+      <div className='flex flex-row justify-between items-center my-12'>
         <Title text='Latest Insights' />
         <HomeHeroButton/>
       </div>
-      <Gallery/>
+
+      <Gallery />
     </div>
   )
 }

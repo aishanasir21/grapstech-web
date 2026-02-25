@@ -6,9 +6,9 @@ import Services from './Services'
 
 const Section2 = () => {
   return (
-    <div className='h-auto w-full relative pt-[10vw] mx-[1vw]'>
+    <div className='h-auto w-full relative pt-25 px-3'>
       <Title text=' our Services'/>
-      <Paragraph className='text-[4.5vw] mx-[1vw] leading-tight -mb-[7vw] mt-3'>High-performance hardscaping.<br/> Consciously crafted + fully customisable.</Paragraph>
+      <Paragraph className='font-[font4] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-[1vw] leading-tight m-2 pb-6 md:pb-6'>Reliable services.<br/>Precisely installed & completely maintainable.</Paragraph>
       <HeroLine/>
       <Services/>
     </div>

@@ -1,35 +1,108 @@
 @import "tailwindcss";
+
 @font-face {
     font-family: font1;
-    src: url(/public/fonts/Akkurat-Mono.e884b32.woff2);
+    src: url("/fonts/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2");
 }
 @font-face {
     font-family: font2;
-    src: url(/public/fonts/NeueHaasGroteskDisplay-Medium.fd99855.woff2);
+    src: url("/fonts/FcybOZJ2ipUdK2dQmwN3gFVAvuk.woff2");
 }
 @font-face {
     font-family: font3;
-    src: url(/public/fonts/NeueHaasGroteskDisplay-Reg.530b233.woff2);
+    src: url("/fonts/SilkaMono-Regular.woff2");
 }
 @font-face {
     font-family: font4;
-    src: url(/public/fonts/UcCo3FwrK3iLTcviYwYZ8UA3.woff2);
+    src: url("/fonts/PPNeueMontreal-Regular.woff2");
 }
-@font-face {
-    font-family: font5;
-    src: url(/public//fonts/lausanne-300.CMiifVRe.woff2);
+
+@keyframes infiniteScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
-body{
-    color: #9999993e;
+
+.animate-infiniteScroll {
+    animation: infiniteScroll 40s linear infinite;
 }
-@keyframes infiniteScroll{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-50%);
-    }
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-.animate-infiniteScroll{
-    animation: infiniteScroll 25s linear infinite;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hammer spinning animation */
+@keyframes spin-hammer {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(30deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(-20deg) scale(0.9);
+  }
+  60% {
+    transform: rotate(360deg) scale(1);
+  }
+  80% {
+    transform: rotate(380deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-spin-hammer {
+  animation: spin-hammer 3s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+}
+
+/* Alternative hammer strike animation */
+@keyframes hammer-strike {
+  0% {
+    transform: rotate(-30deg) translateX(-5px);
+  }
+  25% {
+    transform: rotate(30deg) translateX(5px);
+  }
+  50% {
+    transform: rotate(360deg) translateX(0);
+  }
+  75% {
+    transform: rotate(380deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.animate-hammer-strike {
+  animation: hammer-strike 4s ease-in-out infinite;
+}
+
+/* Smooth hammer rotation */
+@keyframes hammer-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(350deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-hammer-spin {
+  animation: hammer-spin 5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }

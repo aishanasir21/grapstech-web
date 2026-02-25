@@ -1,31 +1,23 @@
 import React from 'react'
 import GalleryItem from './GalleryItem'
+import { galleryItems } from './galleryData'
 
 const Gallery = () => {
   return (
-    <div className="w-full my-[6vw] flex gap-[2vw] items-start justify-between">
-      
+   <div className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 scrollbar-hide">
+  {galleryItems.map((item, index) => (
+    <div key={index} className="snap-start">
       <GalleryItem
-        src="https://i.pinimg.com/474x/96/bb/1d/96bb1d09d4e155d44109f0f8ef2b10d6.jpg"
-        height="h-[22vw]"
+        src={item.src}
+        height={item.height}
+        title={item.title}
+        category={item.category}
+        sector={item.sector}
       />
-
-      <GalleryItem
-        src="https://i.pinimg.com/474x/96/bb/1d/96bb1d09d4e155d44109f0f8ef2b10d6.jpg"
-        height="h-[34vw]"
-      />
-
-      <GalleryItem
-        src="https://i.pinimg.com/474x/96/bb/1d/96bb1d09d4e155d44109f0f8ef2b10d6.jpg"
-        height="h-[22vw]"
-      />
-
-      <GalleryItem
-        src="https://i.pinimg.com/474x/96/bb/1d/96bb1d09d4e155d44109f0f8ef2b10d6.jpg"
-        height="h-[34vw]"
-      />
-
     </div>
+  ))}
+</div>
+
   )
 }
 

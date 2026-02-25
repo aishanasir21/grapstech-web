@@ -9,7 +9,7 @@ import Section7 from '../components/home/section7/Section7'
 
 const Home = () => {
   return (
-    <div className='overflow-hidden bg-[#9999993e]'>
+    <div className='overflow-hidden bg-white '>
      <Hero/>
      <Section1/>
      <Section2/>

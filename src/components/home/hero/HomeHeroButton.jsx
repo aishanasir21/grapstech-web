@@ -1,12 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const HomeHeroButton = () => {
+const HomeHeroButton = ({
+  children,
+  text = "Get a Quote",
+  to = "/contact",
+  className = "",
+  width = "w-32 sm:w-36 md:w-40",
+  bgColor = "bg-black",
+  textColor = "text-white",
+  hoverBgColor = "hover:bg-neutral-400",
+  hoverTextColor = "hover:text-black",
+  padding = "py-2 px-4",
+  rounded = "rounded-full",
+  ...props
+}) => {
   return (
-    <div className='w-[12vw] text-center rounded-full p-1 bg-gray-900'>
-      <Link className='text-[1.3vw] text-white  hover:text-gray-100' to='/contact'>Get a Quote</Link>
-    </div>
-  )
-}
+    <Link
+      to={to}
+      {...props}
+      className={`
+        inline-block ${width} ${padding} ${rounded} 
+        ${bgColor} ${textColor} 
+        text-center text-sm font-medium
+        transition-all duration-300 ease-in-out
+        ${hoverBgColor} ${hoverTextColor}
+        ${className}
+      `}
+    >
+      {children ?? text}
+    </Link>
+  );
+};
 
-export default HomeHeroButton
+export default HomeHeroButton;

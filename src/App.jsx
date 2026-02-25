@@ -1,27 +1,39 @@
 import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import Header from './pages/Header'
 import Home from './pages/Home'
-import Projects from './pages/Projects'
 import About from './pages/About'
-import Services from './pages/Services'
+import Insights from './pages/Insights'
 import Contact from './pages/Contact'
+import Footer from './pages/Footer'
+import Service1 from './pages/Service1'
+import Service2 from './pages/Service2'
+import Service3 from './pages/Service3'
+import Service4 from './pages/Service4'
+import Service5 from './pages/Service5'
 
 const App = () => {
   return (
-    <div className='text-gray-950'>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/services'>Services</Link>
-      <Link to='/projects'>Projects</Link>
-      <Link to='/contact'>Contact</Link>
-      
-     <Routes>
-       <Route path='/' element={<Home />} />
-       <Route path='/about' element={<About />} />
-       <Route path='/services' element={<Services />} />
-       <Route path='/projects' element={<Projects />} />
-       <Route path='/contact' element={<Contact />} />
-     </Routes>
+    <div>
+
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/insights' element={<Insights />} />
+
+        <Route path='/service1' element={<Service1 />} />
+        <Route path='/service2' element={<Service2 />} />
+        <Route path='/service3' element={<Service3 />} />
+        <Route path='/service4' element={<Service4 />} />
+        <Route path='/service5' element={<Service5 />} />
+
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+
+      <Footer />
+
     </div>
   )
 }

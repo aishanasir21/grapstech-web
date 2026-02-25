@@ -3,9 +3,9 @@ import {Dot} from 'lucide-react'
 
 const Title = ({text, className=''}) => {
   return (
-    <div className='flex items-center gap-2 ${className}'>
-      <Dot className='size-10'/>
-      <h3 className='tracking-wider uppercase text-sm'>{text}</h3>
+    <div className='flex items-center font-[font3] ${className}'>
+      <Dot className='size-5 lg:size-8 ${className}'/>
+      <h3 className='tracking-wider uppercase text-[10px] lg:text-[12px] ${className}'>{text}</h3>
     </div>
   )
 }

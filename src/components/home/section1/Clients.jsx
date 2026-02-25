@@ -13,10 +13,10 @@ const clients = [
 ]
 const Clients = () => {
   return (
-    <div className='w-full overflow-hidden py-[10vh]'>
-      <div className='flex w-max animate-infiniteScroll gap-[6vw]'>
+    <div className='w-full overflow-hidden py-16'>
+      <div className='flex whitespace-nowrap animate-infiniteScroll gap-16'>
          {[...clients, ...clients].map((logo,index) => (
-            <img key= {index} src={logo} alt= "logo" className='h-[2vw] object-contain ' />
+            <img key= {index} src={logo} alt= "logo" className='h-6 sm:h-7 md:h-8 lg:h-7 xl:h-7 object-contain ' />
          ))}
       </div>
     </div>

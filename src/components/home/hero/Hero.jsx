@@ -1,24 +1,21 @@
 import React from 'react'
-import HeroMainImage from './HeroMainImage'
-import HomeHeroText from './HomeHeroText'
-import HomeBottomText from './HomeBottomText'
+import HeroImage from './HeroImage'
+import HeroContent from './HeroContent'
 import HomeHeroButton from './HomeHeroButton'
-import HeroLine from './HeroLine'
+import Paragraph from '../section1/Paragraph'
 
 const Hero = () => {
   return (
-    <div className='relative h-[92vh]'>
-      <div className="sticky top-0 h-[92vh] w-full -z-10">
-        <HeroMainImage />
+    <section className=' relative h-screen
+     w-full overflow-hidden flex flex-col items-center justify-end px-3 text-white'>
+      <HeroImage />
+      <div className='relative z-10 flex flex-col gap-8 sm:gap-8 md:gap-8 lg:gap-8 mx-5 my-20 justify-center md:w-6xl'>
+        <HeroContent/>
+        {/* <Paragraph className='font-[font4] tracking-wider text-[12px] md:text-[16px]'>Al-first ERP powering next-gen finance & accounting. General ledger, revenue automation, close management.</Paragraph> */}
+      <HomeHeroButton className='py-2 md:py-3' text='Get Started'/>
       </div>
-      <div className='absolute top-0 w-full h-full flex flex-col px-[6vw] gap-[4vw] pt-[20vw] '>
-        <div className='flex flex-col items-center justify-center gap-[2vw] '>
-          <HomeHeroText />
-          <HomeBottomText />
-        </div>
-        <HomeHeroButton />
-      </div>
-    </div>
+      
+    </section>
   )
 }
 

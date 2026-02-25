@@ -3,7 +3,7 @@ import Section1 from '../components/contact/Section1'
 
 const Contact = () => {
   return (
-    <div>
+    <div className='bg-[#99999942] overflow-hidden'>
       <Section1/>
     </div>
   )
